@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean class="com.bean.Point" id="p1">
+   <property name="x" value="2"></property> 
+   <property name="y" value="5"></property>   
+   </bean>
+   
+   <bean class="com.bean.Triangle" id="tri">
+   <property name="pointA" ref="p1"></property> 
+   
+   <!-- Point B -->
+   <property name="pointB">
+    <bean class="com.bean.Point" id="p2">
+   <property name="x" value="7"></property> 
+   <property name="y" value="9"></property>   
+   </bean>
+   </property>
+   
+   <!-- Point C -->
+   <property name="pointC">
+   <bean class="com.bean.Point" id="p3">
+   <property name="x" value="12"></property> 
+   <property name="y" value="15"></property>   
+   </bean>
+   </property>
+   </bean>
+   
+   <bean class="com.bean.Cirlce" id="cir">
+   <property name="center" ref="p1"></property> 
+   <property name="radius" value="3.4"></property>   
+   </bean>
+   </beans>

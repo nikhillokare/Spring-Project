@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+  <!--   <bean class="com.bean.Point" id="p1">
+   <property name="x" value="2"></property> 
+   <property name="y" value="5"></property>   
+   </bean>
+   
+   <bean class="com.bean.Point" id="p2">
+   <property name="x" value="7"></property> 
+   <property name="y" value="9"></property>   
+   </bean>
+   
+   <bean class="com.bean.Point" id="p3">
+   <property name="x" value="12"></property> 
+   <property name="y" value="15"></property>   
+   </bean> -->
+   
+   <bean class="com.bean.Point" id="pointA">
+   <property name="x" value="2"></property> 
+   <property name="y" value="5"></property>   
+   </bean>
+   
+   <bean class="com.bean.Point" id="pointB">
+   <property name="x" value="7"></property> 
+   <property name="y" value="9"></property>   
+   </bean>
+   
+   <bean class="com.bean.Point" id="pointC">
+   <property name="x" value="12"></property> 
+   <property name="y" value="15"></property>   
+   </bean> 
+   
+   <bean class="com.bean.Triangle" id="tri" autowire="byName">  <!-- properties => byName -->
+  <!--   <property name="pointA" ref="p1"></property> 
+   <property name="pointB" ref="p2"></property>
+   <property name="pointC" ref="p3"></property> -->
+   </bean> 
+   
+    <bean class="com.bean.Circle" id="cir">
+   <property name="center" ref="pointA"></property> 
+   <property name="radius" value="3.4"></property>
+   </bean>
+   
+   <bean class="com.bean.Shape" id="sh" autowire="byType">
+   <!--  <property name="c" ref="cir"></property>
+   <property name="t" ref="tri"></property> -->
+   </bean>
+   </beans>
